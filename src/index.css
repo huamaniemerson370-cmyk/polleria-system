@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff8ee;
+  background:
+    linear-gradient(rgba(12, 8, 6, 0.78), rgba(12, 8, 6, 0.86)),
+    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80')
+      center / cover fixed no-repeat;
+}
+
+/* Contenedor principal */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+/* Títulos */
+h1 {
+  margin: 0 0 6px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffb703;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.65);
+}
+
+h2 {
+  margin: 24px 0 14px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff8ee;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  color: #e6d8c8;
+}
+
+/* Cuadros de mesas compactos */
+.mesas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.mesa-card {
+  background: rgba(24, 16, 12, 0.92);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mesa-card:hover {
+  transform: translateY(-3px);
+  border-color: #fb8500;
+}
+
+.mesa-card.libre {
+  border-top: 3px solid #2ecc71;
+}
+
+.mesa-card.ocupada {
+  border-top: 3px solid #e74c3c;
+}
+
+.mesa-titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.mesa-estado {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.mesa-estado.libre {
+  background: rgba(46, 204, 113, 0.16);
+  color: #58d68d;
+  border: 1px solid rgba(46, 204, 113, 0.4);
+}
+
+.mesa-estado.ocupada {
+  background: rgba(231, 76, 60, 0.18);
+  color: #ff7675;
+  border: 1px solid rgba(231, 76, 60, 0.45);
+}
+
+/* Botones estilizados */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-mesa {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fb8500, #d65a00);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Pedidos Enviados a Cocina */
+.pedidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 16px;
+}
+
+.pedido-card {
+  background: rgba(26, 17, 13, 0.94);
+  border: 1px solid rgba(251, 133, 0, 0.3);
+  border-left: 4px solid #fb8500;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pedido-card ul {
+  margin: 10px 0 14px;
+  padding-left: 20px;
+  color: #fff8ee;
+}
+
+.pedido-card li {
+  margin-bottom: 5px;
+}
+
+.btn-servido {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2a9d8f, #1f7a70);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
